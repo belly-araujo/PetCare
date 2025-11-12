@@ -7,6 +7,7 @@ public class Pet {
     private int idade;
     private String tutor;
 
+    //usado quando o pet ja ta cadastrado
     public Pet(int id, String nome, String especie, int idade, String tutor) {
         this.id = id;
         this.nome = nome;
@@ -15,6 +16,7 @@ public class Pet {
         this.tutor = tutor;
     }
 
+    //usado quando vai cadastrar o pet
     public Pet(String nome, String especie, int idade, String tutor) {
         this(0, nome, especie, idade, tutor);
     }

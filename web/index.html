@@ -4,36 +4,92 @@
     <meta charset="UTF-8">
     <title>🐾 PetCare</title>
     <style>
+        /* ===== Estilo geral ===== */
         body {
-          font-family: Arial, sans-serif;
-          background: #f7f7f7;
-          text-align: center;
-          padding: 40px;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6f4ea, #cde2d0);
+            text-align: center;
+            padding: 60px 20px;
+            color: #3e3e3e;
         }
+
         h1 {
-          color: #2c3e50;
+            color: #2f5233;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
+
+        h3 {
+            color: #5a381e;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        /* ===== Container dos botões ===== */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        /* ===== Caixinhas de navegação ===== */
         a {
-          display: inline-block;
-          margin: 10px;
-          padding: 10px 20px;
-          background: #3498db;
-          color: white;
-          text-decoration: none;
-          border-radius: 6px;
-          transition: 0.2s;
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            background: #ffffff;
+            color: #2f5233;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #a5c49b;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
+
         a:hover {
-          background: #2980b9;
+            background: #d8eacc;
+            border-color: #7cb342;
+            transform: scale(1.03);
+        }
+
+        /* ===== Bloco "Sobre" separado ===== */
+        .sobre {
+            margin-top: 40px;
+            background: #f4efe6;
+            border: 2px solid #d3c3a3;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            color: #5a381e;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sobre:hover {
+            background: #eadcc4;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-<h1>🐾 PetCare</h1>
-<h3>Gerencie seus pets e consultas veterinárias</h3>
 
-<a href="cadastro.html">Cadastrar Pet</a>
-<a href="lista.html">Listar Pets</a>
-<a href="#" onclick="alert('Sistema PetCare desenvolvido por Isabelly 💙')">Sobre</a>
+<h1>🐾 PetCare</h1>
+<h3>Gerencie seus pets e consultas veterinárias de forma simples!</h3>
+
+<div class="menu">
+    <a href="cadastro.html">Cadastrar Pet</a>
+    <a href="lista.html">Listar Pets</a>
+</div>
+
+<div class="sobre" onclick="alert('🌿 Sistema PetCare desenvolvido por Isabelly, Beatriz e Pedro 💚')">
+    Sobre o Projeto
+</div>
+
 </body>
 </html>

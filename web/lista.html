@@ -4,53 +4,106 @@
     <meta charset="UTF-8">
     <title>Lista de Pets</title>
     <style>
+        /* ===== Estilo geral ===== */
         body {
-          font-family: Arial, sans-serif;
-          background: #f7f7f7;
-          padding: 40px;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6f4ea, #cde2d0);
+            padding: 50px 20px;
+            color: #3e3e3e;
         }
+
+        h2 {
+            text-align: center;
+            color: #2f5233;
+            margin-bottom: 30px;
+        }
+
+        /* ===== Tabela ===== */
         table {
-          border-collapse: collapse;
-          width: 80%;
-          margin: 20px auto;
-          background: white;
-          border-radius: 10px;
-          overflow: hidden;
-          box-shadow: 0 0 10px #ccc;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            background: #ffffff;
+            border: 2px solid #a5c49b;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
+
         th, td {
-          border: 1px solid #ddd;
-          padding: 10px;
-          text-align: center;
+            border: 1px solid #d8eacc;
+            padding: 12px;
+            text-align: center;
         }
+
         th {
-          background: #3498db;
-          color: white;
+            background: #4c9a2a;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
+
+        tr:nth-child(even) {
+            background-color: #f6fbf4;
+        }
+
+        tr:hover {
+            background-color: #eaf5e0;
+            transition: background 0.3s;
+        }
+
+        /* ===== Botão de excluir ===== */
         button {
-          background: #e74c3c;
-          color: white;
-          border: none;
-          padding: 6px 10px;
-          border-radius: 6px;
-          cursor: pointer;
+            background: #b6401d;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-weight: 600;
         }
+
         button:hover {
-          background: #c0392b;
+            background: #93371a;
         }
+
+        /* ===== Link de voltar ===== */
         a {
-          display: block;
-          width: fit-content;
-          margin: 20px auto;
-          color: #3498db;
-          text-decoration: none;
+            display: block;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background: #f4efe6;
+            border: 2px solid #d3c3a3;
+            border-radius: 10px;
+            color: #5a381e;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background: #eadcc4;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-<h2 style="text-align:center;">Lista de Pets</h2>
+
+<h2>🐾 Lista de Pets</h2>
+
 <table id="tabelaPets">
-    <tr><th>Nome</th><th>Espécie</th><th>Idade</th><th>Tutor</th><th>Ação</th></tr>
+    <tr>
+        <th>Nome</th>
+        <th>Espécie</th>
+        <th>Idade</th>
+        <th>Tutor</th>
+        <th>Ação</th>
+    </tr>
 </table>
 
 <a href="index.html">⬅ Voltar</a>

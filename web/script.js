@@ -2,36 +2,36 @@
 const form = document.getElementById("formPet");
 if (form) {
   form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    e.preventDefault(); //não recarrega a página
 
-    const dados = {
+    const dados = { //cria um objeto js para cada campo digitado no form
       nome: form.nome.value,
       especie: form.especie.value,
       idade: parseInt(form.idade.value),
       tutor: form.tutor.value
     };
 
-await fetch("/api/pets", {
-  method: "POST",
+await fetch("/api/pets", { //faz uma requisição HTTP POST na rota /api/pets
+  method: "POST", //envia dados
   headers: {
-    "Content-Type": "application/json"   // 🔹 avisa ao Java que é JSON
+    "Content-Type": "application/json"   //avisa ao Java que é JSON
   },
-  body: JSON.stringify(dados)
+  body: JSON.stringify(dados) //converte o objeto dados em uma string JSON
 });
 
 alert("🐶 Pet cadastrado com sucesso!");
-form.reset();
+form.reset(); //limpa o formulário
 
   });
 }
 
-// ---------- Listar Pets ----------
+//Listar Pets
 const tabela = document.getElementById("tabelaPets");
 if (tabela) {
-  fetch("/api/pets")
+  fetch("/api/pets") //faz uma requisição GET pra rota /api/pets
     .then(res => res.json())
     .then(pets => {
-      pets.forEach(p => {
+      pets.forEach(p => { //para cada pet cria uma linha na tabela
         const linha = document.createElement("tr");
         linha.innerHTML = `
           <td>${p.nome}</td>
@@ -45,7 +45,7 @@ if (tabela) {
     });
 }
 
-// ---------- Excluir Pet ----------
+//Excluir Pet
 async function excluir(id) {
   if (confirm("Tem certeza que deseja excluir este pet?")) {
     await fetch(`/api/pets?id=${id}`, { method: "DELETE" });
