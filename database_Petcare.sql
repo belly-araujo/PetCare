@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS petcare; 
+
+CREATE TABLE pet (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  especie VARCHAR(50),
+  idade INT,
+  tutor VARCHAR(100)
+);
